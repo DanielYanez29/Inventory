@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Menu {
 
-    public void showMenu() {
-        Scanner sc = new Scanner(System.in);
+    public void showMenu(Scanner sc) {
+
         Inventory inventory = new Inventory();
         while(true) {
             System.out.println("Menu");
@@ -47,12 +47,14 @@ public class Menu {
                         System.out.println("Enter Product new quantity");
                         int newQuantity = sc.nextInt();
                         inventory.updateProduct(bId, newPrice, newQuantity);
-                        System.out.println("Product has been created");
+                        System.out.println("Product has been updated");
+                        break;
                 case 4:
                     System.out.println("Enter Product id");
                     int newId = sc.nextInt();
                     inventory.deleteProduct(newId);
                     System.out.println("Product has been deleted");
+                    break;
 
                 case 5:
                     System.exit(0);

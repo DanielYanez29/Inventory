@@ -25,5 +25,14 @@ public class Product {
     public void setPrice(double price) {this.price = price;}
     public void setQuantity(int quantity) {this.quantity = quantity;}
 
+    @Override
+    public String toString() {
+        return "ID: " + ID +
+                ", Name: " + name +
+                ", Price: " + price +
+                ", Quantity: " + quantity;
+    }
+
+
 
 }

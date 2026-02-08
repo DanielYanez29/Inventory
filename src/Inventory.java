@@ -18,9 +18,10 @@ public class Inventory {
         return products;
     }
     public Product getProductById(int id) {
-        products.stream().
-                filter(product -> product.getID() == id).findFirst().orElse(null);
-        return products.get(id);
+       return products.stream()
+               .filter(product -> product.getID() == id)
+               .findFirst()
+               .orElse(null);
     }
 
     // Register new products
